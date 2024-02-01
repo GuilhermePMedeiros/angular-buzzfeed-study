@@ -1,1 +1,21 @@
-<p>quizz works!</p>
+<div *ngIf="!isFinish" class="quizz-container">
+    <div class="quizz-title">
+        <h2>{{title}}</h2>
+    </div>
+    <div class="quizz-question">
+        <h2>{{currentQuestion.question}}</h2>
+    </div>
+    <div class="quizz-options">
+        <div *ngFor="let option of currentQuestion.options">
+            <button type="button" class="bnt-option" (click)="nextStap(option.alias)">
+                {{option.name}}
+            </button>
+        </div>
+    </div>
+</div>
+<div *ngIf="isFinish" class="quizz-result">
+    <div class="result">
+        <h1>{{resultFinish}}</h1>
+        <button type="button" class="bnt-option" (click)="restart()">Tentar novamente!</button>
+    </div>
+</div>
