@@ -1,0 +1,16 @@
+.menu-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-bottom: 2px solid #135e00;
+
+    margin-bottom: 20px;
+}
+
+.menu-container img{
+    width: 30vw;
+    height: 8vh;
+
+    margin-block: 30px;
+}
